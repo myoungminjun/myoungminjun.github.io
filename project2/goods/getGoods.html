@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품 보기</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 페이지</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<style>
+ul{
+	list-style:none;
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+</style>
+</head>
+<body>
+	<!DOCTYPE html>
+	<html>
+	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="./goods/getGoodsList.html">PRODUCT</a></li>
+						<li><a href="./inform/getInformList.html">FAQ</a></li>
+						<li><a href="./board/getBoardList.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+						<ul class="right">
+						<li>관리자님 반갑습니다</li>
+						<li><a href="admin.html">관리자 페이지</a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+	</div>
+	</html>
+<div class="wrap">
+<ul>
+	<li><a href="./custom/getCustomList.html">회원관리</a></li>
+	<li><a href="./goods/getGoodsList.html">제품관리</a></li>
+	<li><a href="./inform/getInformList.html">게시판관리</a></li>
+</ul>
+</div>
+</body>
+</html>
+	<div class="container">
+		<h2 class="tit">제품 보기</h2>
+		<form action="UpdateGoodsCtrl" method="post"name="frm">
+		<table class="table">
+			<tr>
+				<th class="item1">제품코드</th>
+				<td class="item2">
+					<input type="text" name="gcode"value="" readonly/>
+				</td>
+			</tr>
+			<tr>
+				<th class="item2">제품이름</th>
+				<td class="item2">
+					<input type="text"name="gname"id="gname"value=""/></td>
+			</tr>
+			<tr>
+				<th class="item3">제품 가격</th>
+				<td class="item2">
+					<input type="text" name="gprice" id="gprice" value=""/><td>
+			</tr>
+			<tr>
+				<th class="item4">제품 수량</th>
+				<td class="item2">
+				<input type="text" name="gcnt" id="gcnt" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item5">제품 설명</th>
+				<td class="item2">
+				<textarea name="incon" id="incon" rows="10" cols="100"></textarea></td>
+			</tr>
+			<tr>
+				<th class="item6">제품 사진</th>
+				<td class="item2"><input type="hidden"name="gimg"id="gimg"value=""/>
+				<img src='' alt=""></td>
+				<td class="item2">
+				<input type="button" value="이미지 업로드" class="in_btn" onclick="imgCheck()" /> 
+                <input type="hidden" value="" name="imgck" id="imgck" /></td>
+			</tr>
+			
+		</table>
+		<!-- 버튼 그룹 -->
+		<div class="btn-group">
+			<a href="./getGoodsList.html"class="btn btn-default">목록</a>
+			<input type="submit"class="btn btn-default" value="수정"/>
+			<a href=""class="btn btn-default">삭제</a>
+		</div>
+	</form>
+		<script>
+	
+	function imgCheck() {
+		window.open("goods/imgUploadForm.html", "goods/imguploadcheck.html", "width=300, height=300");
+	}
+	</script>
+</div>
+<!-- 푸터 인클루드 -->
+</body>
+</html>

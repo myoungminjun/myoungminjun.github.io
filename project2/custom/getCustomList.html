@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 리스트</title>
+<link rel="stylesheet"
+	href="bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="jquery.js"></script>
+<link rel="stylesheet" href=datatables.min.css>
+<script src="datatables.min.js"></script>
+<style>
+.display {
+	background-color: transparent;
+	border-top: 1px solid #444444;
+	border-collapse: collapse;
+	border-bottom: 1px solid #444444;
+}
+
+.list  {
+	border-bottom: 1px solid #444444;
+	padding: 30px;
+}
+th{
+   width: 500px;
+   text-align: left;
+}
+</style>
+</head>
+<body>
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 페이지</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<style>
+ul{
+	list-style:none;
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+</style>
+</head>
+<body>
+	<!DOCTYPE html>
+	<html>
+	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="./goods/getGoodsList.html">PRODUCT</a></li>
+						<li><a href="./inform/getInformList.html">FAQ</a></li>
+						<li><a href="./board/getBoardList.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+						<ul class="right">
+						<li>관리자님 반갑습니다</li>
+						<li><a href="admin.html">관리자 페이지</a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+	</div>
+	</html>
+<div class="wrap">
+<ul>
+	<li><a href="./getCustomList.html">회원관리</a></li>
+	<li><a href="./goods/getGoodsList.html">제품관리</a></li>
+	<li><a href="./inform/getInformList.html">게시판관리</a></li>
+</ul>
+</div>
+</body>
+</html>
+	<h2 class="tit">회원 목록</h2>
+	<table class="display" id="customid">
+		<thead>
+			<tr>
+				<th>아이디</th>
+				<th>비밀번호</th>
+				<th>이름</th>
+				<th>전화번호</th>
+				<th>우편번호</th>
+				<th>주소1</th>
+				<th>상세주소2</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+			</tr>
+
+		</tbody>
+	</table>
+	<script>
+   $(function(){
+	   $("#customid").DataTable();
+   });
+	  </script>
+		<hr>
+		<footer class="ft">
+			<div class="ft_wrap">
+				<p class="copyright">회사명: S&M 코리아 (주). 사업자등록번호: 213-86-18544. 공동
+					대표자: 명민준,이수진 개인정보 보호책임자: 명민준대표. 통신판매신고번호: 2017-경기도 일산-04082.
+					이메일:S&Minc@gmail.com</p>
+				<address>경기도 고양시 일산동구 장항동 128</address>
+			</div>
+		</footer>
+	
+</body>
+</html>

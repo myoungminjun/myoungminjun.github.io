@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문/결제</title>
+</head>
+<body>
+	<div class="container">
+	 <h2 class="tit">결제내용 보기</h2>
+	 	<form action="AddPayCtrl" onsubmit="return payCheck(this)">
+		<table class="table">
+			<tr>
+				<th class="item1">결제자 아이디</th>
+				<td class="item2">
+					<input type="text" name="cusid" value="" readonly/>
+				</td>
+			</tr>
+			<tr>
+				<th class="item2">이름</th>
+				<td class="item2">
+					<input type="text" name="cusname" value=""/><td>
+			</tr>
+			<tr>
+				<th class="item3">전화번호</th>
+				<td class="item2">
+				<input type="text" name="custel" id="custel" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item4">이메일</th>
+				<td class="item2">
+				<input type="text" name="email" id="email" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item4">우편번호</th>
+				<td class="item2">
+				<input type="text" name="zipcode" id="zipcode" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item5">주소1</th>
+				<td class="item2">
+				<input type="text" name="add1" id="add1" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item6">상세주소2</th>
+				<td class="item2">
+				<input type="text" name="add2" id="add2" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item7">참고사항</th>
+				<td class="item2">
+				<input type="text" name="contact" id="contact" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item8">상품</th>
+				<td class="item2">
+				<input type="text" name="gname" id="gname" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item9">수량</th>
+				<td class="item2">
+				<input type="text" name="gcnt" id="gcnt" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item10">결제 금액</th>
+				<td class="item2">
+				<input type="text" name="money" id="money" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item11">졀제 방식</th>
+				<td class="item2">
+				<input type="text" name="paytype" id="paytype" value=""/></td>
+			</tr>
+			<tr>
+				<th class="item12">결제 번호</th>
+				<td class="item2">
+				<input type="text" name="creditnum" id="creditnum" value=""/></td>
+			</tr>
+			
+		</table>
+	<div class="btn-group">
+		<input type="hidden" name="complete" id="complete" value="no" class="btn btn-default">
+		<input type="submit" value="결제완료" class="btn btn-default">	
+		<input type="reset" value="결제취소" class="btn btn-default">	
+		<input type="button" id="paybtn" value="결제하기" class="btn btn-default" />
+	</div>
+	</form>
+	<!-- 결제하기 버튼을 누를 때 결제가 완료되면, complete 요소의 값을 yes로 변경하는 자바스크립트 -->
+		<script>
+		document.getElementById("paybtn").addEventListener("click", function() {
+			//결제모듈 연결
+			document.getElementById("complete").value = "yes";
+		});
+		function payCheck(f) {
+			if(f.complete.value=="yes") {
+				f.submit();
+				return false;
+			} else {
+				alert("결제를 하지 않으셨습니다. 결제하기 버튼을 눌러 결제하시기 바랍니다");
+				document.getElementById("paybtn").focus();
+				return false;
+			}
+		}
+		</script>
+			</div>			
+
+</body>
+</html>

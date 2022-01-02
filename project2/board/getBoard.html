@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판 글 보기</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no"/>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+ul { list-style:none; }
+.logo { float:left; }
+.tnb { float:right; }
+.tnb li { float:left; margin-left:15px; height: 42px;  }
+.tnb li a { display:block; height:42px; line-height: 42px; }
+#gnb { clear:both; }
+.tit { font-size:48px; text-align: center; }
+.btn-default { color:#fff; background-image: linear-gradient(to bottom,#111 0,#222 100%); }
+.btn-default:hover { background-color:black; }
+.table td { min-height:42px; padding:5px; }
+</style>
+</head>
+<body>
+<div class="container">
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 페이지</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<style>
+ul{
+	list-style:none;
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+</style>
+</head>
+<body>
+	<!DOCTYPE html>
+	<html>
+	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="./goods/getGoodsList.html">PRODUCT</a></li>
+						<li><a href="./inform/getInformList.html">FAQ</a></li>
+						<li><a href="./board/getBoardList.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+						<ul class="right">
+						<li>관리자님 반갑습니다</li>
+						<li><a href="admin.html">관리자 페이지</a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+	</div>
+	</html>
+<div class="wrap">
+<ul>
+<li><a href="./getCustomList.html">회원관리</a></li>
+<li><a href="./goods/getGoodsList.html">제품관리</a></li>
+<li><a href="./inform/getInformList.html">게시판관리</a></li>
+</ul>
+</div>
+</body>
+</html>
+	<h2>게시판 글보기</h2>
+	<div class="content">
+	    <div id="board">
+	        <table id="detailBoard" class="table">
+	            <tr>
+	                <td id="title">작성일</td>
+	                <td></td>
+	            </tr>
+	            <tr>
+	                <td id="title">작성자</td>
+	                <td></td>
+	            </tr>
+	            <tr>
+	                <td id="title">
+	                   	 제 목
+	                </td>
+	                <td></td>        
+	            </tr>
+	            <tr>
+	                <td id="title"> 내 용 </td>
+	                <td></td>        
+	            </tr>
+	            <tr>
+	                <td id="title">
+	                   	 첨부파일
+	                </td>
+	                <td>
+	                    <a href=""></a>
+	                </td>    
+	            </tr>
+	    
+	            <tr align="center" valign="middle">
+	                <td colspan="5">
+	                    <a href="" class="btn btn-primary">수정</a>
+	                    <a href="" class="btn btn-primary">삭제</a>
+	                    <a href="" class="btn btn-primary">답글</a>    
+	                    <input type="button" value="목록" 
+	                        onclick="javascript:location.href='GetBoardListCtrl?page=${pageNum }'" class="btn btn-primary">            
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+	</div>
+
+</div>	
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 페이지</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<style>
+ul{
+	list-style:none;
+}
+li{
+	float: left;
+	margin-right: 20px;
+}
+</style>
+</head>
+<body>
+	<!DOCTYPE html>
+	<html>
+	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+	<div class="wrap">
+		<header class="hd">
+			<div class="hd_wrap">
+				<nav class="tnb">
+					<ul class="left">
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="./goods/getGoodsList.html">PRODUCT</a></li>
+						<li><a href="./inform/getInformList.html">FAQ</a></li>
+						<li><a href="./board/getBoardList.html">QNA</a></li>
+					</ul>
+					<a href="index.html" class="logo"> <img src="./img/logo.png"
+						alt="앰블럼이미지"></a>
+						<ul class="right">
+						<li>관리자님 반갑습니다</li>
+						<li><a href="admin.html">관리자 페이지</a></li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+	</div>
+	</html>
+<div class="wrap">
+<ul>
+<li><a href="./custom/getCustomList.html">회원관리</a></li>
+<li><a href="./goods/getGoodsList.html">제품관리</a></li>
+<li><a href="./inform/getInformList.html">게시판관리</a></li>
+</ul>
+</div>
+</body>
+</html>
+	<div class="container">
+		<h2 class="tit">제품목록</h2>
+		<form action="" method="post">
+			<table class="table">
+				<tr>
+					<td><select name="searchType" id="">
+							<option value="intit">제품이름</option>
+					</select> <input type="text" name="searchKeyword" /> <input type="submit"
+						value="검색" /></td>
+				</tr>
+			</table>
+		</form>
+		<table class="table">
+			<tr>
+				<th class="item1">제품 코드</th>
+				<th class="item2">제품 이름</th>
+				<th class="item3">제품 가격</th>
+				<th class="item4">제품 수량</th>
+				<th class="item5">제품 이미지</th>
+			</tr>
+
+
+			<tr>
+				<td class="item1"></td>
+				<td class="item2"><a href=""></a></td>
+				<td class="item3"></td>
+				<td class="item4"></td>
+				<td><img src='' alt=""></td>
+
+			</tr>
+		</table>
+		<!-- 페이지내이션(PageNation) 목록의 값이 한 페이지 분량을 초과할 경우 나누어 표시하고, 해당 페이지 링크를 누르면
+		그 페이지에 해당하는 내용만 표시-->
+		<nav>
+			<ul class="pagination">
+				<li><a href="" arial-label="Previous"><span
+						arial-hidden="true">&laquo;</span></a></li>
+				<li><a href="./getGoodsList.html">1</a></li>
+				<li><a href="" arial-label="Next"><span arial-hidden="true">&raquo;</span></a></li>
+			</ul>
+		</nav>
+		<div class="btn-group">
+			<a href="./goods/addGoods.html" class="btn btn-default">제품 추가</a>
+		</div>
+	</div>
+	<!-- 푸터 인클루드 -->
+</body>
+</html>
