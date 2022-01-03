@@ -20,20 +20,16 @@
 
 </head>
 <body>
-<link rel="stylesheet" type="text/css" href="./css/admin.css">
+	<link rel="stylesheet" type="text/css" href="./css/admin.css">
 	<div class="wrap">
 		<nav class="nav">
 			<ul>
-				<li><a href="getMemberList.html" class="g1">회원관리</a></li>
-				<li><a href="" class="g1">제품관리</a></li>
-					<ul class="sub">
-						<li><a href="getProductList.html" class="s1">제품목록</a></li>
-						<li><a href="insertProduct.html" class="s1">제품등록</a></li>
-					</ul>
-				<li><a href="getNoticeList.html" class="g1">고객센터 관리</a></li>
-				<li><a href="" class="g1">관리자 로그아웃</a></li>
+			   <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+			   <li><a href="getProductList.html" class="g1">제품목록</a></li>
+			   <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
+			   <li><a href="index.html" class="g1">관리자 로그아웃</a></li>
 			</ul>
-		</nav>
+		 </nav>
 	</div>
 <h2 class="tit">회원 목록</h2>
 <ul class="lst lh">
@@ -48,7 +44,19 @@
 	<li class="item9">편집</li>
 </ul>
 <form action="DeleteMemberCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
-
+	<ul class="lst">
+		<li class="item1"><a href="">admin</a></li>
+		<li class="item2">1234</li>
+		<li class="item3">2022</li>
+		<li class="item4">2022-01-03</li>
+		<li class="item5"><a href="">관리자</a></li>
+		<li class="item6">200</li>
+		<li class="item7">25</li>
+		<li class="item8"></li>
+		<li class="item9">
+			<input type="checkbox"  name="ck"  id="ck"  class="ck_item" value=""/>
+		</li>
+	</ul>
 
 
     <hr />

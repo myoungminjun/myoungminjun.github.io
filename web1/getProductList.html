@@ -18,20 +18,18 @@ th, td { display:table-cell; }
    
 </style>
 </head>
-<body> <link rel="stylesheet" type="text/css" href="./css/p_common.css">
-<div class="wrap">
+<body>
+   <link rel="stylesheet" type="text/css" href="./css/admin.css">
 <form action="DeleteProductCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
-   <div class="header">
-      <ul class="nav">
-         <li><a href="index.html">HOME</a></li>
-         <li><a href="product.html">PRODUCT</a></li>
-         <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-      <ul class="tnb">
-         <li><a href="login.html">로그인</a></li>
-         <li><a href="join.html">회원가입</a></li>
-         <li><a href="sitemap.html">사이트맵</a></li>      
-      </ul>
+   <div class="wrap">
+      <nav class="nav">
+         <ul>
+            <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+            <li><a href="getProductList.html" class="g1">제품목록</a></li>
+            <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
+            <li><a href="" class="g1">관리자 로그아웃</a></li>
+         </ul>
+       </nav>
    </div>
 <h2 class="tit">제품목록</h2>
 
@@ -50,11 +48,13 @@ th, td { display:table-cell; }
 
    <tbody>
       <tr>
-         <td class="item1"><a href=""></a></td>
-         <td class="item2"></td>
-         <td class="item3"></td>
-         <td class="item4">/td>
+         <td class="item1">1<a href=""></a></td>
+         <td class="item2">호보백</td>
+         <td class="item3">1500000</td>
+         <td class="item4">1</td>
          <td> <img src='' alt=""></td>
+         <th class="item6">
+            <input type="checkbox"  name="ck"  id="ck"  class="ck_item" value=""/></th>
       </tr>
 
 
@@ -64,7 +64,7 @@ th, td { display:table-cell; }
    <div class="btn_wrap">
    <button type="submit" class="in_btn" onclick="">삭제</button>
    <button type="reset" class="in_btn" onclick="">취소</button>
-   <a href="addProductForm.jsp"class="in_btn" onclick="">제품등록</a>
+   <a href="addProductForm.html"class="in_btn" onclick="">제품등록</a>
    </div>
    </form>
    <script>
