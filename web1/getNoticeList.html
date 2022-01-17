@@ -26,13 +26,17 @@ th, td { display:table-cell; }
    <link rel="stylesheet" type="text/css" href="./css/admin.css">
 <div class="wrap">
    <nav class="nav">
-		<ul>
-		   <li><a href="getMemberList.html" class="g1">회원관리</a></li>
-		   <li><a href="getProductList.html" class="g1">제품목록</a></li>
-		   <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
-		   <li><a href="" class="g1">관리자 로그아웃</a></li>
-		</ul>
-	 </nav>
+      <ul>
+         <li><a href="getMemberList.html" class="g1">회원관리</a></li>
+         <li><a href="" class="g1">제품관리</a></li>
+            <ul class="sub">
+               <li><a href="getProductList.html" class="s1">제품목록</a></li>
+               <li><a href="insertProduct.html" class="s1">제품등록</a></li>
+            </ul>
+         <li><a href="getNoticeList.html" class="g1">고객센터 관리</a></li>
+         <li><a href="" class="g1">관리자 로그아웃</a></li>
+      </ul>
+   </nav>
 </div>
    <h2 class="tit">공지사항</h2>
    <form action="DeleteNoticeCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
@@ -49,15 +53,7 @@ th, td { display:table-cell; }
          </tr>
       </thead>
       <tbody>      
-         <tr>
-         	<td class="item1">관리자</td>
-            <td class="item2"><a href="">admin</a></td>
-            <td class="item3">게시글 제목</td>
-            <td class="item4">게시글 내용</td>
-            <td class="item5">2022-01-03</td>
-            <td class="item6">20</td>
-            <td><input type="checkbox" name="ck" id="ck1" value="" class="ck_item"/></td>
-         </tr>   
+
 </tbody>
 </table>
 <hr />

@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>회원가입</title>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/p_common.css">
+<link rel="shortcut icon" href="./img/favicon.ico">
 <meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no"/>
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -16,10 +18,10 @@
 * { margin: 0; padding: 0;}
 body,html { width: 100%;}
 ul {list-style: none;}
-a { text-decoration: none;}
-
-
-
+a { text-decoration: none;color:#463527;}
+.btn-primary{padding:0 24px;border: 1px solid #666; border-radius: 9px;
+background-image: none; background-color: #fff; color:#333;}
+.btn-primary:hover{ color: #fff; background-color: #463527;}
 input { outline:0; border:0;  border-radius:0;  }
 .fr { clear:both; width:960px; margin:10px auto; margin-bottom:80px;    }
 .fr:after { content:""; display:block; clear:both; }
@@ -43,34 +45,31 @@ cursor:pointer; }
 </style>
 </head>
 <body>
-	<!DOCTYPE html>
-	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
-	<html>
 	<div class="wrap">
 		<header class="hd">
 			<div class="hd_wrap">
 				<nav class="tnb">
 					<ul class="left">
 						<li><a href="index.html">HOME</a></li>
-						<li><a href="./goods/getGoodsList2.html">PRODUCT</a></li>
-						<li><a href="./inform/getInformList2.html">FAQ</a></li>
-						<li><a href="./board/getBoardList2.html">QNA</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
 					</ul>
 					<a href="index.html" class="logo"> <img src="./img/logo.png"
 						alt="앰블럼이미지"></a>
-					<ul class="right">
+	
+			<ul class="right">
 					<li><a href="login.html">로그인</a></li>
 					<li><a href="agreement.html">회원가입</a></li>
-					</ul>
-				</nav>
-				</div>
-		</header>
-	</div>
-	</html>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
 <div class="container">
 
 	<div class="content">	
-		
 		<h2 class="fr_tit">회원 가입</h2>
 		<p class="fr_com">* 항목은 필수 입력 항목입니다.</p>
 		<ul class="fr_list">
@@ -80,7 +79,13 @@ cursor:pointer; }
 					<input type="text" name="cusid" id="cusid" placeholder="5~12 문자 및 숫자로 입력" maxlength="12" class="in_data" required autofocus />
 					<a class="in_btn" id="idckbtn" target="_blank" href="" style="text-align:center; ">ID중복 확인</a>
 					<input type="hidden" value="" name="idck" id="idck" />
-					
+					<script>
+					$(function(){
+						$("#cusid").keyup(function(){
+							$("#idckbtn").attr("href", "DupCtrl?cusid="+$(this).val())
+						});
+					});
+					</script>
 				</span>
 			</li>
 			<li>
@@ -129,10 +134,10 @@ cursor:pointer; }
 			<li>
 				<li class=click>
 			<span class="fr_col">
-				<a href="./login.html" class="in_btn">회원가입</a> 
+				<li><a href="login.html"></a></li>
 			</span>
 			<span class="fr_col">
-				<input type="reset" value="취소" class="in_btn"/>
+				<li><a href="index.html"></a></li>
 			</span>
 			</li>
 		</ul>

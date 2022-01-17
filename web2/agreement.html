@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>약관 동의 페이지</title>
+<link rel="shortcut icon" href="./img/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -16,32 +17,29 @@
 </style>	
 </head>
 <body>
-	<!DOCTYPE html>
-	<link rel="stylesheet" type="text/css" href="./css/p_common.css">
-	<html>
 	<div class="wrap">
 		<header class="hd">
 			<div class="hd_wrap">
 				<nav class="tnb">
 					<ul class="left">
 						<li><a href="index.html">HOME</a></li>
-						<li><a href="./goods/getGoodsList2.html">PRODUCT</a></li>
-						<li><a href="./inform/getInformList2.html">FAQ</a></li>
-						<li><a href="./board/getBoardList2.html">QNA</a></li>
+						<li><a href="getGoodsList2.html">PRODUCT</a></li>
+						<li><a href="getInformList2.html">FAQ</a></li>
+						<li><a href="getBoardList2.html">QNA</a></li>
 					</ul>
 					<a href="index.html" class="logo"> <img src="./img/logo.png"
 						alt="앰블럼이미지"></a>
-					<ul class="right">
+	
+			<ul class="right">
 					<li><a href="login.html">로그인</a></li>
 					<li><a href="agreement.html">회원가입</a></li>
-					</ul>
-				</nav>
-				</div>
-		</header>
-	</div>
-	</html>
+					<li><a href="introduce.html">회사소개</a></li>
+			</ul>
+		  </nav>
+		  </div>
+		  </header>
+		</div>
 	<!-- 약관 동의 폼 -->
-	
 		<div class="form_fr">
 		   <h2 class="fr_tit">회원 약관</h2>	
 			<textarea cols="140" rows="80" readonly>
@@ -158,12 +156,25 @@
 		<div style="text-align: center" class="form_fr">
 			<input type="checkbox" name="agree3" id="agree3" onclick="allCheck()" /> 
 			<label for="agree3">전체 약관에 동의합니다</label> 
-			<a href="./join.html">회원가입</a>
+			<a href="join.html">회원가입</a> 
 			<input type="button" value="취소" onclick="javascript:history.back();"/>
 		</div>
 	</form>
 	<!-- 약관 동의 검사 스크립트 -->
-	
+	<script> 
+		function send(f) { 
+			if(f.agree.checked==true && f.agree2.checked==true) { 
+				return true; 
+			} else { 
+				alert("약관에 동의하시지 않은 것이 존재합니다. 모든 약관에 동의를 해주시기 바랍니다."); 
+				return false; 
+			}
+		}	
+		function allCheck() {
+			agree_form.agree.checked = true;
+			agree_form.agree2.checked = true;
+		}
+	</script>
 	<hr>
 	<footer class="ft">
 		<div class="ft_wrap">
@@ -173,6 +184,5 @@
 			<address>경기도 고양시 일산동구 장항동 128</address>
 		</div>
 	</footer>
-
 </body>
 </html>

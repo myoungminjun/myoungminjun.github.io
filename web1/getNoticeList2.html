@@ -1,3 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@page import="java.sql.*" %>
+    <%@ page import="java.util.ArrayList" %>
+   <%@ page import="com.company.model.NoticeVO" %>
+<%
+   ArrayList<NoticeVO> noticeList = (ArrayList<NoticeVO>) request.getAttribute("noticeList");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,17 +34,8 @@ th, td { display:table-cell; }
 </style>
 </head>
 <body>
-   <link rel="stylesheet" type="text/css" href="./css/admin.css">
-   <div class="wrap">
-      <nav class="nav">
-         <ul>
-            <li><a href="getMemberList.html" class="g1">회원관리</a></li>
-            <li><a href="getProductList.html" class="g1">제품목록</a></li>
-            <li><a href="getNoticeList.html" class="g1">공지사항 관리</a></li>
-            <li><a href="" class="g1">관리자 로그아웃</a></li>
-         </ul>
-       </nav>
-   </div>
+<div class="wrap">
+<%@include file ="header.jsp" %>
    <h2 class="tit">공지사항</h2>
    <form action="DeleteNoticeCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
    <table class="tb">
@@ -53,28 +52,29 @@ th, td { display:table-cell; }
       </thead>
       <tbody>      
 
+<%
+   for(int i=0; i<noticeList.size(); i++) {
+      NoticeVO notice = noticeList.get(i);
+
+%>
+
          <tr>
-         	<td class="item1">관리자</td>
-            <td class="item2"><a href="EditNoticeFormCtrl.html">관리자</a></td>
-            <td class="item3">게시글 제목</td>
-            <td class="item4">게시글 내용</td>
-            <td class="item5">2022-01-03</td>
-            <td class="item6">12</td>
+         	<td class="item1"><%=notice.getAut()%></td>
+            <td class="item2"><a href="EditNoticeFormCtrl?id=<%=notice.getN_id() %>"><%=notice.getN_id()%></a></td>
+            <td class="item3"><%=notice.getTit()%></td>
+            <td class="item4"><%=notice.getCon()%></td>
+            <td class="item5"><%=notice.getRdate()%></td>
+            <td class="item6"><%=notice.getVisited()%></td>
          </tr>   
+<%
+   }
+%>
 
 </tbody>
 </table>
 </form>
 
-   <div class="hr">
-      <hr>
-  <footer class="ft">
-       <div class="ft_wrap">
-          <p class="copyright">  회사명: 프라다 코리아 (유). 사업자등록번호: 213-86-18544. 공동 대표자: 이수진,명민준  개인정보 보호책임자: 이수진대표. 통신판매신고번호: 2017-경기도 일산-04082. 
-      이메일:www.naver.com</p>             
-          <address>경기도 고양시 일산동구 장항동 128</address>
-      </div>
-  </footer>
-</div>
+   </div>
+   <%@include file ="footer.jsp" %>
 </body>
 </html>
