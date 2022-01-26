@@ -16,7 +16,7 @@
     <meta property="og:image" content="website">
     <meta property="og:url" content="https://www.mof.go.kr/">
     <!--파비콘-->
-    <link rel="stylesheet" href="./data/favicon.ico"  type='text/css'>
+    <link rel="icon" href="./data/favicon.ico">
     <!--필요한 라이브러리-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <!-- Hotjar Tracking Code for https://myoungminjun.github.io/web4/ -->
@@ -450,7 +450,7 @@
 			<hr />
 			<section id="container">
                 <h2></h2>
-					<table class="table table-hover">
+					<table class="table table-hover" id="tablecon">
 						<thead>
 							<tr><th>번호</th><th>제목</th><th>작성자</th><th>등록일</th><th>조회수</th></tr>
 						</thead>
@@ -529,10 +529,16 @@
 							</tr>	
                             
 					</table>
+            <script>
+            $('#tablecon').DataTable({
+                "scrollY":        "300px",
+                "scrollCollapse": true,
+                "paging":         false
+            });
+        </script>
                     <ul class="write"><li><a href="write.html">글쓰기</a></li></ul>	 
-			</section>
-            
-        </div>
+                </section>
+                </div>
         <footer class="ft" id="ft">
             <div class="wrap wide">
                 <div class="cont">
